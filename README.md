@@ -10,6 +10,8 @@ To address these challenges, I designed and built an end-to-end analytics soluti
 
 The final output is a multi-page interactive Power BI dashboard focused not just on reporting metrics, but on understanding user behavior, identifying growth bottlenecks, and translating data into actionable product decisions.
 
+---
+
 ## 🎯 Problem Statement
 
 A B2B SaaS company offering a project management platform was facing two major challenges — low conversion from free trial users to paid plans, and high churn after the first few months of usage. Although the platform was consistently acquiring users, only a small percentage of users were converting into long-term paying customers.
@@ -24,6 +26,8 @@ The product team needed better visibility into user behavior to understand:
 
 The goal of this project was to analyze product usage, feature adoption, retention trends, and revenue metrics to identify growth bottlenecks and help the product team make data-driven decisions.
 
+---
+
 ## 📸 Dashboard Preview
 
 ### Page 1 — Executive Overview
@@ -34,7 +38,7 @@ The goal of this project was to analyze product usage, feature adoption, retenti
 
 ### Page 2 — User Behaviour & Engagement
 
-![User Behaviour](screenshots/page-2-user-behaviour..jpeg)
+![User Behaviour](screenshots/page-2-user-behaviour.jpeg)
 
 ---
 
@@ -54,6 +58,8 @@ The goal of this project was to analyze product usage, feature adoption, retenti
 
 ![Product Strategy](screenshots/page-5-product-strategy.jpeg)
 
+---
+
 ## 📌 Key Insights
 
 - Only about 25% of total users end up becoming paid and retained customers. The biggest drop happens during activation, where only ~39% of users become active after signup, pointing to onboarding friction early in the user journey.
@@ -70,6 +76,8 @@ The goal of this project was to analyze product usage, feature adoption, retenti
 
 - Overall, the analysis highlighted onboarding, feature discovery, and long-term retention as the biggest areas the product team should prioritise to improve sustainable growth.
 
+---
+
 ## 🛠️ Tech Stack
 
 | Tool | Purpose |
@@ -77,6 +85,8 @@ The goal of this project was to analyze product usage, feature adoption, retenti
 | Python (Pandas, NumPy, Matplotlib) | Synthetic data generation and exploratory data analysis |
 | PostgreSQL | Data storage, cleaning, transformation, and analytical queries |
 | Power BI (DAX) | Interactive multi-page dashboard and data modelling |
+
+---
 
 ## 📂 Dataset
 
@@ -98,6 +108,8 @@ The dataset used in this project is synthetic and was generated using Python (Pa
 - NULL values in key columns
 - Duplicate session records
 - Missing acquisition channel values
+
+---
 
 ## 🔄 Project Workflow
 
@@ -162,10 +174,13 @@ Built SQL queries covering:
 
 Implemented a star schema data model with `users` as the central dimension table:
 
-```plaintext
+```text
 users (1) ──── (1) subscriptions
 users (1) ──── (*) sessions
 users (1) ──── (*) feature_usage
+```
+
+---
 
 ## ⚙️ Dashboard Pages
 
@@ -215,17 +230,17 @@ A large percentage of users drop off before becoming active users, indicating on
 Examines feature adoption patterns to understand how product engagement impacts conversion, retention, and revenue.
 
 **KPIs:**  
-Total Feature Events | Avg Features per User | High Value Users %  
+Total Feature Events | Avg Usage Count | High Value Users % | Avg Features per User  
 
 **Key Visuals:**
 - Top Features by Usage  
 - User Segmentation by Feature Adoption  
-- Conversion Rate by Adoption Segment  
 - Revenue Contribution by User Segment  
+- Conversion Rate by Feature Adoption Segment  
 - Feature Adoption Insights Panel  
 
 **Key Insight:**  
-Users adopting multiple features show significantly stronger conversion and retention compared to low-engagement users.
+Users with deeper feature adoption show significantly stronger conversion rates, while very few users reach power-user level — making feature discovery one of the biggest growth opportunities for the product.
 
 ---
 
@@ -266,6 +281,8 @@ Activation Rate | Avg Features per User | Churn Rate | Retained Users %
 **Key Insight:**  
 The strongest growth opportunities lie in improving onboarding, increasing feature adoption, and reducing post-conversion churn.
 
+---
+
 ## 📈 EDA Findings Summary
 
 | Area | Observation |
@@ -276,6 +293,8 @@ The strongest growth opportunities lie in improving onboarding, increasing featu
 | Session Behaviour | Free users averaged 62.5 mins/session vs 60.4 mins for paid users |
 | Acquisition Channels | Google showed the highest conversion rate (51.2%) but also the highest churn |
 | Revenue Impact | Monthly MRR lost to churn was nearly equal to retained MRR |
+
+---
 
 ## 📁 Project Structure
 
@@ -315,6 +334,9 @@ saas-product-analytics-case-study/
 │
 ├── saas_analytics_eda.py
 ├── README.md
+```
+
+---
 
 ## ⚙️ How to Run This Project
 
